@@ -1,0 +1,24 @@
+.row-fluid
+  .span12
+    %h1 App Status
+    %table.table
+      %thead
+        %tr
+          %th Date
+          %th Status
+          %th Message
+          %th
+      %tbody
+        - if @app_statuses.any?
+          %tr.info.current-status
+            %td= @app_statuses.first.created_at
+            %td= @app_statuses.first.status
+            %td= @app_statuses.first.message
+            %td *Current status
+          - @app_statuses.drop(1).each do |a|
+            %tr.historical
+              %td= a.created_at
+              %td= a.status
+              %td= a.message
+              %td
+          
