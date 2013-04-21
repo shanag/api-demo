@@ -1,0 +1,14 @@
+/.bundle
+/db/*.sqlite3
+/log/*.log
+/tmp
+config/database.yml
+db/schema.rb
+db/structure.sql
+public/assets
+public/uploads
+.DS_Store
+.env
+.pry_history
+.swp
+
