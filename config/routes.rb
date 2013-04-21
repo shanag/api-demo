@@ -1,4 +1,14 @@
 ApiDemo::Application.routes.draw do
+  
+  namespace :api do
+    namespace :v1 do
+      resources :app_statuses
+    end
+  end
+
+  resources :app_statuses
+  root :to => 'app_statuses#index'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
